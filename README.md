@@ -43,7 +43,49 @@ https://gitlab.com/GiulianoCalabrese/Robot-autonome
 1-Go to Rasp console
 2-open terminal
 3-Type : sudo nano /etc/rc.local
+Autonomous robot able to move by detecting obstacles and recognizing images.
+
+For this video we run a python3 code that uses OpenCV to recognize faces.
+
+
+
+Hardware:
+-Raspberry Pi3 + Pi Camera
+
+-Arduino Mega (Uno would have done the trick too)
+
+-DC motors with encoder + L9110 driver + wheels
+http://www.robot-maker.com/forum/topi...
+http://www.robot-maker.com/shop/blog/...
+
+-Analog Polulu sensor :
+ http://www.instructables.com/id/How-t...
+
+- Breadboard, external rechargeable battery and DIY stand
+
+
+Lib to install:
+
+-Raspberry Pi3 for image recognition :
+https://www.pyimagesearch.com/2016/04...
+
+-Communication between raspberry and arduino :
+http://electroniqueamateur.blogspot.f...
+
+Link : https://gitlab.com/GiulianoCalabrese/...
+- Arduino code
+- Raspberry code (Be careful the haarcascade file must be in the same folder as the face_detect.py file)
+- instruction to execute the python code in loop when the raspberry is turned on:
+1-Go to Rasp console
+2-open terminal
+3-Type : sudo nano /etc/rc.local
 4-Write in the first line the command : python3 /path_to/face_detect.py & 
 5-Save with ctrl+o and exit with ctrl+q
+6-Turn off and on the raspberry and the python script should run automatically
+  
+4-Write in the first line the command : python3 /path_to/face_detect.py & 
+5-Save with ctrl+o and exit with ctrl+q
+
+https://www.youtube.com/watch?v=KmISzDWKcg0
 6-Turn off and on the raspberry and the python script should run automatically
 
